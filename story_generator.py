@@ -4,6 +4,7 @@ import asyncio
 from typing import List, Optional
 from writer import Writer
 from evaluator import Evaluator
+import config  # Import the config module
 
 class StoryGenerator:
     def __init__(self):
