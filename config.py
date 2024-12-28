@@ -1,8 +1,13 @@
 """Configuration settings for the story generation system."""
+import os
 
 # Gemini API settings
-API_KEY = "YOUR_API_KEY"  # Replace with actual API key
+API_KEY = os.environ.get("GEMINI_API_KEY")
 MODEL_NAME = "gemini-exp-1206"
+
+# Check if API key is set
+if API_KEY is None:
+    raise ValueError("The GEMINI_API_KEY environment variable is not set.")
 
 # Generation settings
 CANDIDATE_COUNT = 3  # Number of candidate sentences to generate
@@ -12,6 +17,7 @@ TEMPERATURE = 0.7  # Controls randomness in generation
 # File paths
 STORY_FILE = "story.txt"  # File containing the existing story
 OUTPUT_FILE = "next_chapter.txt"  # File to save the generated chapter
+CHAPTER_OUTLINE_FILE = "next_chapter_outline.txt" # File containing the chapter outline
 
 # System prompts
 WRITER_BASE_PROMPT = """

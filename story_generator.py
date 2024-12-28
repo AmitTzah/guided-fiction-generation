@@ -15,7 +15,7 @@ class StoryGenerator:
 
     def load_story(self, filepath: str) -> str:
         """Load the existing story from a file."""
-        with open(filepath, 'r') as f:
+        with open(filepath, 'r',encoding="utf-8") as f:
             return f.read()
 
     def save_progress(self, filepath: str):

@@ -1,0 +1,13 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Environments (if you are using a virtual environment)
+.venv/
+venv/
+
+# Project-specific - story files
+chapter_outline.txt
+story.txt
+next_chapter.txt
+next_chapter_outline.txt
